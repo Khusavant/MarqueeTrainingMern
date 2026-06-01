@@ -1,0 +1,12 @@
+# Ignore everything by default
+*
+# But DO NOT ignore directories (so we can go inside them)
+!*/
+
+# DO NOT ignore HTML and CSS files
+!*.html
+!*.css
+
+# Keep gitignore and README
+!.gitignore
+!README.md
