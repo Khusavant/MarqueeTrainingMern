@@ -1,298 +1,217 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Shopping site for Mobile, Cloths...</title>
-    <link
-      rel="shortcut icon"
-      href="https://tse4.mm.bing.net/th/id/OIP.I70WuHuME5bj3-i-LO_NhwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
-      type="image/x-icon"
-    />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      /* Overrides to match the exact screenshot look without touching styles.css */
-      body {
-        background-color: white !important;
-      }
-      header {
-        position: relative !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: auto !important;
-        margin: 0 !important;
-      }
-      nav {
-        background-color: white !important;
-      }
-      #icons-box {
-        background-color: white !important;
-        height: auto !important;
-        padding: 15px 40px !important;
-        justify-content: space-between !important;
-        border-bottom: 2px solid #f0f0f0;
-      }
-      .icons-items {
-        background-color: transparent !important;
-        width: auto !important;
-        height: auto !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 8px !important;
-        padding: 0 !important;
-        cursor: pointer;
-      }
-      .icons-items i {
-        font-size: 24px;
-        color: #ffc107;
-      }
-      .icons-items span {
-        font-size: 14px;
-        font-weight: 500;
-        color: #333;
-      }
-      main {
-        position: relative !important;
-        top: 0 !important;
-        margin-left: 0 !important;
-        width: 100% !important;
-        background-color: white !important;
-        padding: 40px !important;
-      }
-      .product-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-        justify-content: flex-start;
-      }
-      .product-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 260px;
-        font-family: sans-serif;
-        cursor: pointer;
-      }
-      .card-image-container {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        background: linear-gradient(to bottom, #9eb4d6, #7a9cc5);
-        border-radius: 15px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .card-header {
-        display: flex;
-        justify-content: space-between;
-        padding: 15px;
-        z-index: 2;
-      }
-      .brand-logo {
-        font-weight: 900;
-        color: #1a2a40;
-        font-style: italic;
-        font-size: 18px;
-        line-height: 1;
-      }
-      .brand-logo span {
-        font-size: 10px;
-        font-weight: normal;
-        display: block;
-        margin-top: 2px;
-      }
-      .ad-badge {
-        background-color: rgba(255, 255, 255, 0.5);
-        color: #fff;
-        padding: 2px 6px;
-        font-size: 10px;
-        font-weight: bold;
-        border-radius: 3px;
-        height: fit-content;
-      }
-      .discount-banner {
-        background-color: #ffcc00;
-        padding: 15px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 20px;
-        color: #000;
-        z-index: 2;
-      }
-      .product-title {
-        margin-top: 15px;
-        font-size: 18px;
-        color: #222;
-      }
-      .product-subtitle {
-        color: #666;
-        font-size: 14px;
-        margin-top: 5px;
-      }
-      .fake-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=260&q=80');
-        background-size: cover;
-        background-position: center;
-        mix-blend-mode: multiply;
-        opacity: 0.6;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <section id="icons-box">
-          <div class="icons-items">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span>Bags</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-shirt"></i>
-            <span>Fashion</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-mobile-screen"></i>
-            <span>Mobile</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-spray-can"></i>
-            <span>Beauty</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-laptop"></i>
-            <span>Computers</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-plug"></i>
-            <span>Electronics</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-tv"></i>
-            <span>Appliances</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-puzzle-piece"></i>
-            <span>Toys</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-jar"></i>
-            <span>Food</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-jar"></i>
-            <span>Food</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-jar"></i>
-            <span>Food</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-jar"></i>
-            <span>Food</span>
-          </div>
-          <div class="icons-items">
-            <i class="fa-solid fa-jar"></i>
-            <span>Food</span>
-          </div>
-        </section>
-      </nav>
-    </header>
-    <main>
-      <div class="product-grid">
-        <!-- Card 1 -->
-        <div class="product-card">
-          <div class="card-image-container">
-            <div class="fake-image"></div>
-            <div class="card-header">
-              <div class="brand-logo">ABROS<br><span>PLAY BIG</span></div>
-              <div class="ad-badge">AD</div>
-            </div>
-            <div class="discount-banner">Min. 65% Off</div>
-          </div>
-          <p class="product-title">Men's Abros shoes</p>
-          <p class="product-subtitle">Image 1</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Shopping site for Mobile, Cloths...</title>
+  <link rel="shortcut icon"
+    href="https://tse4.mm.bing.net/th/id/OIP.I70WuHuME5bj3-i-LO_NhwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <header>
+    <section id="icons-box">
+      <div class="icons-items"><i class="fa-solid fa-bag-shopping"></i><span>Bags</span></div>
+      <div class="icons-items"><i class="fa-solid fa-shirt"></i><span>Fashion</span></div>
+      <div class="icons-items"><i class="fa-solid fa-mobile-screen"></i><span>Mobile</span></div>
+      <div class="icons-items"><i class="fa-solid fa-spray-can"></i><span>Beauty</span></div>
+      <div class="icons-items"><i class="fa-solid fa-laptop"></i><span>Computers</span></div>
+      <div class="icons-items"><i class="fa-solid fa-plug"></i><span>Electronics</span></div>
+      <div class="icons-items"><i class="fa-solid fa-tv"></i><span>Appliances</span></div>
+      <div class="icons-items"><i class="fa-solid fa-puzzle-piece"></i><span>Toys</span></div>
+      <div class="icons-items"><i class="fa-solid fa-jar"></i><span>Food</span></div>
+      <div class="icons-items"><i class="fa-solid fa-couch"></i><span>Furniture</span></div>
+    </section>
+  </header>
+
+  <main>
+    <!-- SECTION 1: Home Decor -->
+    <section class="home-decor-section">
+      <div class="home-decor-header">
+        <h2>Home Decor & Furnishing</h2>
+        <div class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+      </div>
+      <div class="home-decor-content">
+        <div class="decor-card">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=200" alt="Appliance Covers" />
+          <div class="title">Appliance Covers</div>
+          <div class="discount">Min. 50% Off</div>
         </div>
-        <!-- Card 2 -->
-        <div class="product-card">
-          <div class="card-image-container">
-            <div class="fake-image"></div>
-            <div class="card-header">
-              <div class="brand-logo">ABROS<br><span>PLAY BIG</span></div>
-              <div class="ad-badge">AD</div>
-            </div>
-            <div class="discount-banner">Min. 65% Off</div>
-          </div>
-          <p class="product-title">Men's Abros shoes</p>
-          <p class="product-subtitle">Image 2</p>
+        <div class="decor-card">
+          <img src="https://images.unsplash.com/photo-1594877717469-8bc3fa8b61c1?w=200" alt="Key Holders" />
+          <div class="title">Key Holders</div>
+          <div class="discount">Min. 50% Off</div>
         </div>
-        <!-- Card 3 -->
-        <div class="product-card">
-          <div class="card-image-container">
-            <div class="fake-image"></div>
-            <div class="card-header">
-              <div class="brand-logo">ABROS<br><span>PLAY BIG</span></div>
-              <div class="ad-badge">AD</div>
-            </div>
-            <div class="discount-banner">Min. 65% Off</div>
-          </div>
-          <p class="product-title">Men's Abros shoes</p>
-          <p class="product-subtitle">Image 3</p>
+        <div class="decor-card">
+          <img src="https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=200" alt="Wall Clocks" />
+          <div class="title">Wall Clocks</div>
+          <div class="discount">Min. 50% Off</div>
         </div>
-        <!-- Card 4 -->
-        <div class="product-card">
-          <div class="card-image-container">
-            <div class="fake-image"></div>
-            <div class="card-header">
-              <div class="brand-logo">ABROS<br><span>PLAY BIG</span></div>
-              <div class="ad-badge">AD</div>
-            </div>
-            <div class="discount-banner">Min. 65% Off</div>
-          </div>
-          <p class="product-title">Men's Abros shoes</p>
-          <p class="product-subtitle">Image 4</p>
-        </div>
-        <!-- Card 5 -->
-        <div class="product-card">
-          <div class="card-image-container">
-            <div class="fake-image"></div>
-            <div class="card-header">
-              <div class="brand-logo">ABROS<br><span>PLAY BIG</span></div>
-              <div class="ad-badge">AD</div>
-            </div>
-            <div class="discount-banner">Min. 65% Off</div>
-          </div>
-          <p class="product-title">Men's Abros shoes</p>
-          <p class="product-subtitle">Image 5</p>
-        </div>
-        <!-- Card 6 -->
-        <div class="product-card">
-          <div class="card-image-container">
-            <div class="fake-image"></div>
-            <div class="card-header">
-              <div class="brand-logo">ABROS<br><span>PLAY BIG</span></div>
-              <div class="ad-badge">AD</div>
-            </div>
-            <div class="discount-banner">Min. 65% Off</div>
-          </div>
-          <p class="product-title">Men's Abros shoes</p>
-          <p class="product-subtitle">Image 6</p>
+        <div class="decor-card">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=200" alt="Mosquito Nets" />
+          <div class="title">Mosquito Nets</div>
+          <div class="discount">Min. 50% Off</div>
         </div>
       </div>
-    </main>
-  </body>
+    </section>
+
+    <!-- SECTION 2: Brands in Spotlight -->
+    <section class="spotlight-section">
+      <div class="spotlight-left">
+        <h2>Brands in Spotlight</h2>
+        <div class="product-grid">
+          <!-- Card 1 -->
+          <div class="product-card">
+            <div class="card-image-container">
+              <div class="card-header">
+                <div class="brand-logo">ABROS</div>
+                <div class="ad-badge">AD</div>
+              </div>
+              <div class="discount-banner">Min. 65% Off</div>
+            </div>
+            <div class="product-title">Men's Abros shoes</div>
+          </div>
+          <!-- Card 2 -->
+          <div class="product-card">
+            <div class="card-image-container">
+              <div class="card-header">
+                <div class="brand-logo" style="color: #c00;">Save IN</div>
+                <div class="ad-badge">AD</div>
+              </div>
+              <div class="discount-banner" style="background-color: #ffe11b;">Up to 40% off</div>
+            </div>
+            <div class="product-title">Classic watches</div>
+          </div>
+          <!-- Card 3 -->
+          <div class="product-card">
+            <div class="card-image-container">
+              <div class="card-header">
+                <div class="brand-logo" style="color: #c00;">CAMPUS</div>
+                <div class="ad-badge">AD</div>
+              </div>
+              <div class="discount-banner" style="background-color: #ffe11b;">Min. 60% Off</div>
+            </div>
+            <div class="product-title">Kicks that keep up</div>
+          </div>
+          <!-- Card 4 -->
+          <div class="product-card">
+            <div class="card-image-container">
+              <div class="card-header">
+                <div class="brand-logo">boAt</div>
+                <div class="ad-badge">AD</div>
+              </div>
+              <div class="discount-banner" style="background-color: #ffe11b;">Up to 80% Off</div>
+            </div>
+            <div class="product-title">Month end spl. deal</div>
+          </div>
+          <!-- Card 5 -->
+          <div class="product-card">
+            <div class="card-image-container">
+              <div class="card-header">
+                <div class="brand-logo">boAt</div>
+                <div class="ad-badge">AD</div>
+              </div>
+              <div class="discount-banner" style="background-color: #ffe11b;">Up to 80% Off</div>
+            </div>
+            <div class="product-title">Mega price drop</div>
+          </div>
+          <!-- Card 6 -->
+          <div class="product-card">
+            <div class="card-image-container">
+              <div class="card-header">
+                <div class="brand-logo" style="color: #ff3c00;">FIRE BOLTT</div>
+                <div class="ad-badge">AD</div>
+              </div>
+              <div class="discount-banner" style="background-color: #ffe11b;">Up to 70% Off</div>
+            </div>
+            <div class="product-title">Track your fitness</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 3: Footer -->
+  <footer>
+    <div class="footer-banner">
+      <span>Flipkart - Your go-to place for Online Shopping</span>
+      <span>+</span>
+    </div>
+    <div class="footer-top">
+      <div class="footer-col">
+        <h3>ABOUT</h3>
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Flipkart Stories</a>
+        <a href="#">Press</a>
+        <a href="#">Corporate Information</a>
+      </div>
+      <div class="footer-col">
+        <h3>GROUP COMPANIES</h3>
+        <a href="#">Myntra</a>
+        <a href="#">Cleartrip</a>
+        <a href="#">Shopsy</a>
+      </div>
+      <div class="footer-col">
+        <h3>HELP</h3>
+        <a href="#">Payments</a>
+        <a href="#">Shipping</a>
+        <a href="#">Cancellation & Returns</a>
+        <a href="#">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h3>CONSUMER POLICY</h3>
+        <a href="#">Cancellation & Returns</a>
+        <a href="#">Terms Of Use</a>
+        <a href="#">Security</a>
+        <a href="#">Privacy</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Grievance Redressal</a>
+        <a href="#">EPR Compliance</a>
+        <a href="#">FSSAI Food Safety Connect App</a>
+      </div>
+      <div class="footer-col large">
+        <h3>Mail Us:</h3>
+        <p>Flipkart Internet Private Limited,<br>Buildings Alyssa, Begonia &<br>Clove Embassy Tech Village,<br>Outer
+          Ring Road, Devarabeesanahalli Village,<br>Bengaluru, 560103,<br>Karnataka, India</p>
+        <div class="footer-social">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+      <div class="footer-col large">
+        <h3>Registered Office Address:</h3>
+        <p>Flipkart Internet Private Limited,<br>Buildings Alyssa, Begonia &<br>Clove Embassy Tech Village,<br>Outer
+          Ring Road, Devarabeesanahalli Village,<br>Bengaluru, 560103,<br>Karnataka, India<br>CIN :
+          U51109KA2012PTC066107<br>Telephone: <a href="tel:04445614700">044-45614700</a> / <a
+            href="tel:04467415800">044-67415800</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <a href="#" class="footer-bottom-item"><i class="fa-solid fa-briefcase"></i> Become a Seller</a>
+      <a href="#" class="footer-bottom-item"><i class="fa-solid fa-star"></i> Advertise</a>
+      <a href="#" class="footer-bottom-item"><i class="fa-solid fa-gift"></i> Gift Cards</a>
+      <a href="#" class="footer-bottom-item"><i class="fa-solid fa-circle-question"></i> Help Center</a>
+      <span>&copy; 2007-2026 Flipkart.com</span>
+      <div class="payment-icons">
+        <!-- Placeholders for payment icons (Visa, Mastercard, etc.) -->
+        <div style="background: white; padding: 2px 4px; border-radius: 2px; color: #172337; font-weight: bold;">VISA
+        </div>
+        <div style="background: white; padding: 2px 4px; border-radius: 2px; color: #172337; font-weight: bold;">
+          MasterCard</div>
+        <div style="background: white; padding: 2px 4px; border-radius: 2px; color: #172337; font-weight: bold;">RuPay
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
